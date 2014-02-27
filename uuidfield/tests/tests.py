@@ -63,3 +63,13 @@ class UUIDFieldTestCase(TestCase):
         filtered_obj = AutoUUIDField.objects.filter(uuid=obj_uuid)[0]
         self.assertEqual(inserted_obj.uuid, obj_uuid)
         self.assertEqual(filtered_obj.uuid, obj_uuid)
+
+        inserted_obj = AutoUUIDField.objects.get(uuid=str(obj_uuid))
+        filtered_obj = AutoUUIDField.objects.filter(uuid=str(obj_uuid))[0]
+        self.assertEqual(inserted_obj.uuid, obj_uuid)
+        self.assertEqual(filtered_obj.uuid, obj_uuid)
+
+        inserted_obj = AutoUUIDField.objects.get(uuid=unicode(obj_uuid))
+        filtered_obj = AutoUUIDField.objects.filter(uuid=unicode(obj_uuid))[0]
+        self.assertEqual(inserted_obj.uuid, obj_uuid)
+        self.assertEqual(filtered_obj.uuid, obj_uuid)

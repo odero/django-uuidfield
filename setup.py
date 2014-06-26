@@ -6,7 +6,7 @@ setup(
     author='David Cramer',
     author_email='dcramer@gmail.com',
     description='UUIDField in Django',
-    url='https://github.com/dcramer/django-uuidfield',
+    url='https://github.com/odero/django-uuidfield',
     zip_safe=False,
     install_requires=[
         'django',
